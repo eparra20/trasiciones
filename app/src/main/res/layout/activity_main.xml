@@ -21,4 +21,12 @@
         android:id="@+id/buttonIr"
         android:text="Ir"/>
 
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/buttonIrFragment"
+        android:text="Ir Fragment"/>
+
 </LinearLayout>

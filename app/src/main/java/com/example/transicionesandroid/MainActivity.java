@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String TRANSICION_DE_GATITO = "TRANSICION_DE_GATITO";
     private Button buttonIr;
+    private Button buttonIrFragment;
 
     private ImageView imageView;
 
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         buttonIr = findViewById(R.id.buttonIr);
+        buttonIrFragment= findViewById(R.id.buttonIrFragment);
 
         imageView = findViewById(R.id.maImageView);
         imageView.setTransitionName(TRANSICION_DE_GATITO);
@@ -40,6 +42,14 @@ public class MainActivity extends AppCompatActivity {
                 ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(MainActivity.this, Pair.<View, String>create(imageView, ViewCompat.getTransitionName(imageView)));
 
                 startActivity(intent,optionsCompat.toBundle());
+            }
+        });
+
+        buttonIrFragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,FragActivity.class);
+                startActivity(intent);
             }
         });
 
